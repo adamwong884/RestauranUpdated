@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -46,6 +47,7 @@ public class DetailFragment extends Fragment {
             ((TextView) rootView.findViewById(R.id.tvRating)).setText(mRes.getRank());
             ((TextView) rootView.findViewById(R.id.tvStar)).setText(mRes.getStar());
             ((TextView) rootView.findViewById(R.id.tvDish)).setText(mRes.getDish());
+            ((ImageView) rootView.findViewById(R.id.ivRes)).setImageResource(mRes.getImageDrawableid());
         };
             return rootView;
     }

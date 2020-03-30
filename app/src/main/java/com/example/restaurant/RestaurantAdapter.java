@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -54,11 +55,13 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
     //Declare variables in cardview
     public static class RestViewHolder extends RecyclerView.ViewHolder{
     public TextView name, rank;
+    public ImageView pic;
 
     public RestViewHolder(View v){
         super(v);
         name = v.findViewById(R.id.tvName);
         rank = v.findViewById(R.id.tvRating);
+        pic = v.findViewById(R.id.ivRes);
 
     }
     }
@@ -78,6 +81,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         //Assigning values to the holders
         holder.name.setText(restAtPosition.getName());
         holder.rank.setText(restAtPosition.getRank());
+        holder.pic.setImageResource(restAtPosition.getImageDrawableid());
         holder.itemView.setTag(restAtPosition);
         holder.itemView.setOnClickListener(mOnClickListener);
         };

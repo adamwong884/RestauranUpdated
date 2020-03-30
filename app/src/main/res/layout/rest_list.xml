@@ -6,7 +6,12 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:clickable="true"
-    android:focusable="true">
+
+    android:focusable="true"
+
+    android:visibility="visible"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,7 +19,7 @@
         android:background="@android:color/white">
 
         <ImageView
-            android:id="@+id/ivArt"
+            android:id="@+id/ivRes"
             android:layout_width="383dp"
             android:layout_height="154dp"
 
@@ -35,7 +40,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.096"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivArt"
+            app:layout_constraintTop_toBottomOf="@+id/ivRes"
             app:layout_constraintVertical_bias="0.272" />
 
         <TextView
