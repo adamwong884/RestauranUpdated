@@ -19,7 +19,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
        if (savedInstanceState == null){
-           //Bundle, passing arguments
+           //Bundle, passing arguments to the detail fragment
            Bundle arguments = new Bundle();
            arguments.putString(DetailFragment.ARG_ITEM_ID, getIntent().getStringExtra(DetailFragment.ARG_ITEM_ID));
            //Fragment manager
