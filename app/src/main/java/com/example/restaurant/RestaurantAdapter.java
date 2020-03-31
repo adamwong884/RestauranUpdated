@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 //Adapter class that populates the recyclerview, cardview with data pulled from the Restaurant class.
+//imageview details need to do
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestViewHolder> {
     private MainActivity mParentActivity;
     private ArrayList<Restaurant> mRes;
@@ -25,6 +26,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         public void onClick(View v) {
             Restaurant restaurant = (Restaurant) v.getTag();
             //Passing values to fragment
+            //wide screen if statement
             if (mTwoPane) {
                 Bundle arguments = new Bundle();
                 arguments.putString(DetailFragment.ARG_ITEM_ID, restaurant.getRank());
@@ -52,7 +54,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
 
     }
 
-    //Declare variables in cardview
+    //Declare variables in cardview -> pic, textviews
     public static class RestViewHolder extends RecyclerView.ViewHolder{
     public TextView name, rank, cuisine;
     public ImageView pic;
@@ -76,8 +78,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
 
     @Override
     public void onBindViewHolder(@NonNull RestViewHolder holder, int position) {
-        //Calling the Restaurant class for data that will populate the holder
-
+        //Calling the Restaurant class for data that will populate the holder using getters and setters
         Restaurant restAtPosition = mRes.get(position);
         //Assigning values to the holders
         holder.name.setText(restAtPosition.getName());

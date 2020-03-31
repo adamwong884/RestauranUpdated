@@ -22,7 +22,7 @@ public class DetailActivity extends AppCompatActivity {
            //Bundle, passing arguments
            Bundle arguments = new Bundle();
            arguments.putString(DetailFragment.ARG_ITEM_ID, getIntent().getStringExtra(DetailFragment.ARG_ITEM_ID));
-           //Fragment
+           //Fragment manager
            DetailFragment fragment = new DetailFragment();
            fragment.setArguments(arguments);
            getSupportFragmentManager()

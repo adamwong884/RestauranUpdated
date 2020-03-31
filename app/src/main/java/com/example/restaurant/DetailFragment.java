@@ -17,7 +17,8 @@ import android.widget.TextView;
 public class DetailFragment extends Fragment {
     public static final String ARG_ITEM_ID = "item_id";
     private Restaurant mRes;
-
+    // to do: image view dynamic change based on what is clicked on
+    //Fragment details - link to XML of fragment, declare variables
     public DetailFragment() {
         // Required empty public constructor
     }
@@ -25,7 +26,7 @@ public class DetailFragment extends Fragment {
      @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+//How is the fragment going to identify what needs to show?
         if (getArguments().containsKey(ARG_ITEM_ID)) {
             mRes = Restaurant.getRestaurant(getArguments().getString(ARG_ITEM_ID));
             this.getActivity().setTitle(mRes.getName());
@@ -36,7 +37,7 @@ public class DetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
-
+//declaring XML values and linking them to the data that will be shown using the getter and setter methods in the Restaurant class.
         if (mRes != null){
             ((TextView) rootView.findViewById(R.id.tvName)).setText(mRes.getName());
             ((TextView) rootView.findViewById(R.id.tvAddress)).setText(mRes.getAddress());

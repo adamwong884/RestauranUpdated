@@ -13,6 +13,8 @@ public class Restaurant {
     private String dish;
     private int imageDrawableId;
 
+    //database of the Restaurants that will be displayed, including the images.
+
     public Restaurant(String name, String number, String cuisine, String rank, String address, String review, String star, String dish, int imageDrawableId){
         this.name = name;
         this.number = number;
@@ -110,7 +112,7 @@ public class Restaurant {
     public String toString(){
         return rank;
     }
-
+// need to include data about the restaurants and drawable images.
     public static ArrayList<Restaurant> getRest() {
         ArrayList<Restaurant> restaurants = new ArrayList<>();
         restaurants.add(new Restaurant("Jenny's Asian Kitchen", "02 9743 8823", "Asian", "#1", "11-13 Chester Hill Road, Chester Hill, Sydney", "Jenny's Asian Kitchen offers a " +
