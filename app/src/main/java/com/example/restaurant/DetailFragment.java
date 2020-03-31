@@ -19,8 +19,7 @@ public class DetailFragment extends Fragment {
     private Restaurant mRes;
 
     public DetailFragment() {
-        // Required empty p
-        // ublic constructor
+        // Required empty public constructor
     }
 
      @Override
