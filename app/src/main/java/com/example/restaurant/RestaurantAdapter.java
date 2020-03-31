@@ -54,7 +54,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
 
     //Declare variables in cardview
     public static class RestViewHolder extends RecyclerView.ViewHolder{
-    public TextView name, rank;
+    public TextView name, rank, cuisine;
     public ImageView pic;
 
     public RestViewHolder(View v){
@@ -62,6 +62,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         name = v.findViewById(R.id.tvName);
         rank = v.findViewById(R.id.tvRating);
         pic = v.findViewById(R.id.ivRes);
+        cuisine = v.findViewById(R.id.tvCuisine);
 
     }
     }
@@ -82,6 +83,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         holder.name.setText(restAtPosition.getName());
         holder.rank.setText(restAtPosition.getRank());
         holder.pic.setImageResource(restAtPosition.getImageDrawableid());
+        holder.cuisine.setText(restAtPosition.getCuisine());
         holder.itemView.setTag(restAtPosition);
         holder.itemView.setOnClickListener(mOnClickListener);
         };
